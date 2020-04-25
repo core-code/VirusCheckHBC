@@ -5,9 +5,9 @@ Usage:
 
 Make sure you checkout the 'CoreLib' next (!) to the VirusCheckHBC folder:
 
-`git clone git@github.com:core-code/CoreLib.git`
+`git clone https://github.com/core-code/CoreLib.git`
 
-`git clone git@github.com:core-code/VirusCheckHBC.git`
+`git clone https://github.com/core-code/VirusCheckHBC.git`
 
 
 Now compile and install it: 
