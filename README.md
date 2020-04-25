@@ -11,7 +11,7 @@ git clone https://github.com/core-code/CoreLib.git
 git clone https://github.com/core-code/VirusCheckHBC.git
 
 # Compile and install (will be in /usr/local/bin):
-cd VirusCheckHBC
+cd VirusCheckHBC || exit 1
 xcodebuild install DSTROOT=/
 ```
 
