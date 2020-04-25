@@ -13,6 +13,7 @@ Make sure you checkout the 'CoreLib' next (!) to the VirusCheckHBC folder:
 Now compile and install it: 
 
 `cd VirusCheckHBC/`
+
 `xcodebuild install DSTROOT=/`
 
 run it by speciying your APIKEY:
