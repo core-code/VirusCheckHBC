@@ -236,10 +236,13 @@ int main(int argc, const char * argv[])
             
             if ([@"--all" isEqualToString:@(argv[1])])
             {
+                let moreCaskDirs = @[@"/usr/local/Homebrew/Library/Taps/homebrew/homebrew-cask-drivers/Casks",
+                                    @"/usr/local/Homebrew/Library/Taps/homebrew/homebrew-cask-versions/Casks"];
 
                 cc_log(@"Info: going to check all locally stored casks - hopefully you did run 'brew update' beforehand ( %@ )", caskDir);
-                let caskFiles = caskDir.directoryContentsAbsolute;
-                
+                var caskFiles = caskDir.directoryContentsAbsolute;
+                for (NSString *otherCaskDir in moreCaskDirs)
+                    caskFiles = [caskFiles arrayByAddingObjectsFromArray:otherCaskDir.directoryContentsAbsolute];
                 checkVirusTotal(caskFiles);
             }
             else
